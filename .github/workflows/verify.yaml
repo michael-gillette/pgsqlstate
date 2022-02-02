@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  backend:
+  library:
     runs-on: ubuntu-latest
     steps:
       - name: Prepare Java
