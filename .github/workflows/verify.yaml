@@ -1,0 +1,25 @@
+name: verify
+
+on:
+  push:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: "temurin"
+          java-version: "8"
+      - name: Prepare Codebase
+        uses: actions/checkout@v2
+      - name: Restore Maven
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Execute Tests
+        run: ./mvnw clean verify
