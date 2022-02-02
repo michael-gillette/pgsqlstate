@@ -6,6 +6,10 @@ on:
 jobs:
   library:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
     steps:
       - name: Prepare Java
         uses: actions/setup-java@v2
@@ -14,6 +18,10 @@ jobs:
           java-version: "8"
       - name: Prepare Codebase
         uses: actions/checkout@v2
+      - name: Prepare CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: "java"
       - name: Restore Maven
         uses: actions/cache@v2
         with:
@@ -23,3 +31,5 @@ jobs:
             ${{ runner.os }}-maven-
       - name: Execute Tests
         run: ./mvnw clean verify
+      - name: Execute CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
