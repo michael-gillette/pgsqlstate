@@ -6,6 +6,5 @@
 *.iml
 
 # maven
-.mvn/wrapper
 target/
 
