@@ -4,14 +4,35 @@
     <name>pgsqlstate</name>
     <description>Postgres SqlState</description>
 
-    <groupId>net.michaelgillette.lib</groupId>
+    <groupId>com.github.mgillette</groupId>
     <artifactId>pgsqlstate</artifactId>
     <version>${revision}${changelist}</version>
 
+    <issueManagement>
+        <url>https://github.com/michael-gillette/pgsqlstate/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/michael-gillette/pgsqlstate</url>
+        <connection>scm:git:git://github.com:michael-gillette/pgsqlstate.git</connection>
+        <developerConnection>scm:git:git://github.com:michael-gillette/pgsqlstate.git</developerConnection>
+    </scm>
+
     <developers>
         <developer>
+            <id>michael-gillette</id>
             <name>Michael Gillette</name>
             <email>me@michaelgillette.net</email>
+            <url>https://github.com/michael-gillette</url>
         </developer>
     </developers>
 
