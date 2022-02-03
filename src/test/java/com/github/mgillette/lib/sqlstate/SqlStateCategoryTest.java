@@ -20,36 +20,28 @@
  * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.github.mgillette.lib.pgsqlstate;
+package com.github.mgillette.lib.sqlstate;
 
-import com.github.mgillette.lib.sqlstate.SqlStateLeafClass;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PgSqlStateTest {
+class SqlStateCategoryTest {
 
     @Test
-    void getRootClass() {
-        assertEquals(
-            PgSqlStateClass.SUCCESSFUL_COMPLETION,
-            PgSqlState.SUCCESSFUL_COMPLETION.getRootClass()
-        );
-    }
-
-    @Test
-    void getLeafClass() {
-        assertEquals(
-            new SqlStateLeafClass("000", "successful_completion"),
-            PgSqlState.SUCCESSFUL_COMPLETION.getLeafClass()
-        );
-    }
-
-    @Test
+    @SuppressWarnings("all")
     void getCode() {
+        assertEquals(SqlStateCategory.SUCCESS.getCode(), "S");
+        assertEquals(SqlStateCategory.WARNING.getCode(), "W");
+        assertEquals(SqlStateCategory.NO_DATA.getCode(), "N");
+        assertEquals(SqlStateCategory.EXCEPTION.getCode(), "X");
+    }
+
+    @Test
+    void newRootClass() {
         assertEquals(
-            "00000",
-            PgSqlState.SUCCESSFUL_COMPLETION.getCode()
+            SqlStateCategory.SUCCESS.newRootClass("00", "success"),
+            new SqlStateRootClass(SqlStateCategory.SUCCESS, "00", "success")
         );
     }
 

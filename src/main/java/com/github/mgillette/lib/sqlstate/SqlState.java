@@ -20,37 +20,21 @@
  * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.github.mgillette.lib.pgsqlstate;
+package com.github.mgillette.lib.sqlstate;
 
-import com.github.mgillette.lib.sqlstate.SqlStateLeafClass;
-import org.junit.jupiter.api.Test;
+/**
+ * SqlState
+ *
+ * @since 0.1.0
+ */
+public interface SqlState {
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+    SqlStateCategory getCategory();
 
-class PgSqlStateTest {
+    SqlStateClass getRootClass();
 
-    @Test
-    void getRootClass() {
-        assertEquals(
-            PgSqlStateClass.SUCCESSFUL_COMPLETION,
-            PgSqlState.SUCCESSFUL_COMPLETION.getRootClass()
-        );
-    }
+    SqlStateClass getLeafClass();
 
-    @Test
-    void getLeafClass() {
-        assertEquals(
-            new SqlStateLeafClass("000", "successful_completion"),
-            PgSqlState.SUCCESSFUL_COMPLETION.getLeafClass()
-        );
-    }
-
-    @Test
-    void getCode() {
-        assertEquals(
-            "00000",
-            PgSqlState.SUCCESSFUL_COMPLETION.getCode()
-        );
-    }
+    String getCode();
 
 }

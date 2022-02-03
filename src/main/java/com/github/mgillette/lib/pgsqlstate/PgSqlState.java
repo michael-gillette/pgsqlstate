@@ -22,108 +22,105 @@
 
 package com.github.mgillette.lib.pgsqlstate;
 
-import java.util.Objects;
+import com.github.mgillette.lib.sqlstate.*;
 
 /**
- * PgSqlState
+ * Postgres SqlState
  *
  * An enumeration of all current Postgres SQLState Errors.
  *
  * @see <a href="https://www.postgresql.org/docs/14/errcodes-appendix.html">Offical Postgres Error States</a>
  * @since 0.1.0
  */
-public enum PgSqlState {
+public enum PgSqlState implements SqlState {
 
     SUCCESSFUL_COMPLETION(
-        "00", "000"),
+        PgSqlStateClass.S00, "000"),
 
 
     WARNING(
-        "01", "000"),
+        PgSqlStateClass.W01, "000"),
 
     NULL_VALUE_ELIMINATED_IN_SET_FUNCTION(
-        "01", "003"),
+        PgSqlStateClass.W01, "003"),
 
     STRING_DATA_RIGHT_TRUNCATION(
-        "01", "004"),
+        PgSqlStateClass.W01, "004"),
 
     PRIVILEGE_NOT_REVOKED(
-        "01", "006"),
+        PgSqlStateClass.W01, "006"),
 
     PRIVILEGE_NOT_GRANTED(
-        "01", "007"),
+        PgSqlStateClass.W01, "007"),
 
     IMPLICIT_ZERO_BIT_PADDING(
-        "01", "008"),
+        PgSqlStateClass.W01, "008"),
 
     DYNAMIC_RESULT_SETS_RETURNED(
-        "01", "00C"),
+        PgSqlStateClass.W01, "00C"),
 
     DEPRECATED_FEATURE(
-        "01", "P01"),
+        PgSqlStateClass.W01, "P01"),
 
 
     NO_DATA(
-        "02", "000"),
+        PgSqlStateClass.N02, "000"),
 
     NO_ADDITIONAL_DYNAMIC_RESULT_SETS_RETURNED(
-        "02", "001"),
+        PgSqlStateClass.N02, "001"),
 
 
     SQL_STATEMENT_NOT_YET_COMPLETE(
-        "03", "000"),
+        PgSqlStateClass.X03, "000"),
+
+
+    CONNECTION_EXCEPTION(
+        PgSqlStateClass.X08, "000"),
+
+    SQLCLIENT_UNABLE_TO_ESTABLISH_SQLCONNECTION(
+        PgSqlStateClass.X08, "001"),
+
+    CONNECTION_DOES_NOT_EXIST(
+        PgSqlStateClass.X08, "003"),
+
+    SQLSERVER_REJECTED_ESTABLISHMENT_OF_SQLCONNECTION(
+        PgSqlStateClass.X08, "004"),
+
+    CONNECTION_FAILURE(
+        PgSqlStateClass.X08, "006"),
+
+    TRANSACTION_RESOLUTION_UNKNOWN(
+        PgSqlStateClass.X08, "007"),
+
+    PROTOCOL_VIOLATION(
+        PgSqlStateClass.X08, "P01"),
 
     ;
 
-    private final String errorClass;
-    private final String errorCode;
-    private final String errorState;
+    private final SqlState sqlState;
 
-    PgSqlState(
-        String errorClass,
-        String errorCode
-    ) {
-        this.errorClass = Objects.requireNonNull(
-             errorClass, "errorClass is required.");
-        this.errorCode = Objects.requireNonNull(
-             errorCode, "errorCode is required.");
-        this.errorState = errorClass + errorCode;
+    PgSqlState(SqlStateRootClass rootClass, String code) {
+        this.sqlState = new SqlStateEntity(rootClass, code, name().toLowerCase());
     }
 
-    /**
-     * Error Class
-     *
-     * @return {@link #errorClass}
-     */
-    public String getErrorClass() {
-        return errorClass;
+    @Override
+    public SqlStateCategory getCategory() {
+        return sqlState.getCategory();
     }
 
-    /**
-     * Error Code
-     *
-     * @return {@link #errorCode}
-     */
-    public String getErrorCode() {
-        return errorCode;
+    @Override
+    public SqlStateClass getRootClass() {
+        return sqlState.getRootClass();
     }
 
-    /**
-     * Error Label
-     *
-     * @return the lower-cased {@link #name()}
-     */
-    public String getErrorLabel() {
-        return name().toLowerCase();
+    @Override
+    public SqlStateClass getLeafClass() {
+        return sqlState.getLeafClass();
     }
 
-    /**
-     * Error State
-     *
-     * @return {@link #errorClass} and {@link #errorCode}
-     */
-    public String getErrorState() {
-        return errorState;
+    @Override
+    public String getCode() {
+        return sqlState.getCode();
     }
 
 }
