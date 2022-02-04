@@ -104,6 +104,24 @@ public enum PgSqlState implements SqlState {
         PgSqlStateClass.X0A, "000"),
 
 
+    INVALID_TRANSACTION_INITIATION(
+        PgSqlStateClass.X0B, "000"),
+
+
+    LOCATOR_EXCEPTION(
+        PgSqlStateClass.X0F, "000"),
+
+    INVALID_LOCATOR_SPECIFICATION(
+        PgSqlStateClass.X0F, "001"),
+
+
+    INVALID_GRANTOR(
+        PgSqlStateClass.X0L, "000"),
+
+    INVALID_GRANT_SPECIFICATION(
+        PgSqlStateClass.X0L, "001"),
+
+
     SYSTEM_ERROR(
         PgSqlStateClass.X58, "000"),
 

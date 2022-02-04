@@ -63,6 +63,18 @@ public abstract class PgSqlStateClass {
         SqlStateCategory.EXCEPTION.newRootClass(
             "0A", "Feature Not Supported");
 
+    public static final SqlStateRootClass X0B =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "0B", "Invalid Transaction Initiation");
+
+    public static final SqlStateRootClass X0F =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "0F", "Locator Exception");
+
+    public static final SqlStateRootClass X0L =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "0L", "Invalid Grantor");
+
     public static final SqlStateRootClass X58 =
         SqlStateCategory.EXCEPTION.newRootClass(
             "58", "System Error");
@@ -94,6 +106,9 @@ public abstract class PgSqlStateClass {
     public static final SqlStateRootClass CONNECTION_EXCEPTION = X08;
     public static final SqlStateRootClass TRIGGERED_ACTION_EXCEPTION = X09;
     public static final SqlStateRootClass FEATURE_NOT_SUPPORTED = X0A;
+    public static final SqlStateRootClass INVALID_TRANSACTION_INITIATION = X0B;
+    public static final SqlStateRootClass LOCATOR_EXCEPTION = X0F;
+    public static final SqlStateRootClass INVALID_GRANTOR = X0L;
     public static final SqlStateRootClass SYSTEM_ERROR = X58;
     public static final SqlStateRootClass SNAPSHOT_FAILURE = X72;
     public static final SqlStateRootClass CONFIGURATION_FILE_ERROR = XF0;
