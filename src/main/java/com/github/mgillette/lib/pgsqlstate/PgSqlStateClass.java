@@ -55,10 +55,50 @@ public abstract class PgSqlStateClass {
         SqlStateCategory.EXCEPTION.newRootClass(
             "08", "Connection Exception");
 
+    public static final SqlStateRootClass X09 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "09", "Triggered Action Exception");
+
+    public static final SqlStateRootClass X0A =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "0A", "Feature Not Supported");
+
+    public static final SqlStateRootClass X58 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "58", "System Error");
+
+    public static final SqlStateRootClass X72 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "72", "Snapshot Failure");
+
+    public static final SqlStateRootClass XF0 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "F0", "Configuration File Error");
+
+    public static final SqlStateRootClass XHV =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "HV", "Foreign Data Wrapper Error");
+
+    public static final SqlStateRootClass XP0 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "P0", "PL/pgSQL Error");
+
+    public static final SqlStateRootClass XXX =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "XX", "Internal Error");
+
     public static final SqlStateRootClass SUCCESSFUL_COMPLETION = S00;
     public static final SqlStateRootClass WARNING = W01;
     public static final SqlStateRootClass NO_DATA = N02;
     public static final SqlStateRootClass SQL_STATEMENT_NOT_COMPLETE = X03;
     public static final SqlStateRootClass CONNECTION_EXCEPTION = X08;
+    public static final SqlStateRootClass TRIGGERED_ACTION_EXCEPTION = X09;
+    public static final SqlStateRootClass FEATURE_NOT_SUPPORTED = X0A;
+    public static final SqlStateRootClass SYSTEM_ERROR = X58;
+    public static final SqlStateRootClass SNAPSHOT_FAILURE = X72;
+    public static final SqlStateRootClass CONFIGURATION_FILE_ERROR = XF0;
+    public static final SqlStateRootClass FOREIGN_DATA_WRAPPER_ERROR = XHV;
+    public static final SqlStateRootClass PL_PGSQL_ERROR = XP0;
+    public static final SqlStateRootClass INTERNAL_ERROR = XXX;
 
 }

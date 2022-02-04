@@ -25,7 +25,10 @@ package com.github.mgillette.lib.pgsqlstate;
 import com.github.mgillette.lib.sqlstate.SqlStateLeafClass;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class PgSqlStateTest {
 
@@ -51,6 +54,18 @@ class PgSqlStateTest {
             "00000",
             PgSqlState.SUCCESSFUL_COMPLETION.getCode()
         );
+    }
+
+    @Test
+    void verifyCodesAreUnique() {
+        Set<String> codes = new LinkedHashSet<>();
+
+        for (PgSqlState value : PgSqlState.values()) {
+            assertTrue(
+                codes.add(value.getCode()),
+                "duplicate code: " + value.getCode()
+            );
+        }
     }
 
 }
