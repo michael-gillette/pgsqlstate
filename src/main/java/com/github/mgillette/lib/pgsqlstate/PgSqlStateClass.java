@@ -75,6 +75,62 @@ public abstract class PgSqlStateClass {
         SqlStateCategory.EXCEPTION.newRootClass(
             "0L", "Invalid Grantor");
 
+    public static final SqlStateRootClass X0P =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "0P", "Invalid Role Specification");
+
+    public static final SqlStateRootClass X0Z =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "0Z", "Diagnostics Exception");
+
+    public static final SqlStateRootClass X20 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "20", "Case Not Found");
+
+    public static final SqlStateRootClass X21 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "21", "Cardinality Violation");
+
+    public static final SqlStateRootClass X22 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "22", "Data Exception");
+
+    public static final SqlStateRootClass X23 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "23", "Integrity Constraint Violation");
+
+    public static final SqlStateRootClass X24 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "24", "Invalid Cursor State");
+
+    public static final SqlStateRootClass X25 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "25", "Invalid Transaction State");
+
+    public static final SqlStateRootClass X26 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "26", "Invalid SQL Statement Name");
+
+    public static final SqlStateRootClass X27 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "27", "Triggered Data Change Violation");
+
+    public static final SqlStateRootClass X28 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "28", "Invalid Authorization Specification");
+
+    public static final SqlStateRootClass X2B =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "2B", "Dependent Privilege Descriptors Still Exist");
+
+    public static final SqlStateRootClass X2D =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "2D", "Invalid Transaction Termination");
+
+    public static final SqlStateRootClass X2F =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "2F", "SQL Routine Exception");
+
     public static final SqlStateRootClass X58 =
         SqlStateCategory.EXCEPTION.newRootClass(
             "58", "System Error");
@@ -109,6 +165,11 @@ public abstract class PgSqlStateClass {
     public static final SqlStateRootClass INVALID_TRANSACTION_INITIATION = X0B;
     public static final SqlStateRootClass LOCATOR_EXCEPTION = X0F;
     public static final SqlStateRootClass INVALID_GRANTOR = X0L;
+    public static final SqlStateRootClass INVALID_ROLE_SPECIFICATION = X0P;
+    public static final SqlStateRootClass DIAGNOSTICS_EXCEPTION = X0Z;
+    public static final SqlStateRootClass CASE_NOT_FOUND = X20;
+    public static final SqlStateRootClass CARDINALITY_VIOLATION = X21;
+    public static final SqlStateRootClass DATA_EXCEPTION = X22;
     public static final SqlStateRootClass SYSTEM_ERROR = X58;
     public static final SqlStateRootClass SNAPSHOT_FAILURE = X72;
     public static final SqlStateRootClass CONFIGURATION_FILE_ERROR = XF0;

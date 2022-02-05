@@ -42,11 +42,14 @@
         <changelist>-SNAPSHOT</changelist>
 
         <!-- Dependency Versions -->
+        <assertj.version>3.22.0</assertj.version>
         <flatten-maven.version>1.2.7</flatten-maven.version>
         <jacoco.version>0.8.7</jacoco.version>
+        <jsoup.version>1.14.3</jsoup.version>
         <junit5.version>5.8.2</junit5.version>
         <maven-compiler.version>3.8.1</maven-compiler.version>
         <maven-enforcer.version>3.0.0</maven-enforcer.version>
+        <maven-failsafe.version>3.0.0-M5</maven-failsafe.version>
         <maven-resources.version>3.2.0</maven-resources.version>
         <maven-surefire.version>3.0.0-M5</maven-surefire.version>
     </properties>
@@ -56,6 +59,24 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -90,6 +111,21 @@
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven-failsafe.version}</version>
+                <executions>
+                    <execution>
+                        <id>verify</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
