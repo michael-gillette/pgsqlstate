@@ -449,270 +449,278 @@ public enum PgSqlState implements SqlState {
         PgSqlStateClass.X2F, "004"),
 
 
-//    INVALID_CURSOR_NAME(
-//        PgSqlStateClass.X34, "000"),
-//
-//    EXTERNAL_ROUTINE_EXCEPTION(
-//        PgSqlStateClass.X38, "000"),
-//
-//    CONTAINING_SQL_NOT_PERMITTED(
-//        PgSqlStateClass.X38, "001"),
-//
-//    MODIFYING_SQL_DATA_NOT_PERMITTED(
-//        PgSqlStateClass.X38, "002"),
-//
-//    PROHIBITED_SQL_STATEMENT_ATTEMPTED(
-//        PgSqlStateClass.X38, "003"),
-//
-//    READING_SQL_DATA_NOT_PERMITTED(
-//        PgSqlStateClass.X38, "004"),
-//
-//    EXTERNAL_ROUTINE_INVOCATION_EXCEPTION(
-//        PgSqlStateClass.X39, "000"),
-//
-//    INVALID_SQLSTATE_RETURNED(
-//        PgSqlStateClass.X39, "001"),
-//
-//    NULL_VALUE_NOT_ALLOWED(
-//        PgSqlStateClass.X39, "004"),
-//
-//    TRIGGER_PROTOCOL_VIOLATED(
-//        PgSqlStateClass.X39, "P01"),
-//
-//    SRF_PROTOCOL_VIOLATED(
-//        PgSqlStateClass.X39, "P02"),
-//
-//    EVENT_TRIGGER_PROTOCOL_VIOLATED(
-//        PgSqlStateClass.X39, "P03"),
-//
-//    SAVEPOINT_EXCEPTION(
-//        PgSqlStateClass.X3B, "000"),
-//
-//    INVALID_SAVEPOINT_SPECIFICATION(
-//        PgSqlStateClass.X3B, "001"),
-//
-//    INVALID_CATALOG_NAME(
-//        PgSqlStateClass.X3D, "000"),
-//
-//    INVALID_SCHEMA_NAME(
-//        PgSqlStateClass.X3F, "000"),
-//
-//    TRANSACTION_ROLLBACK(
-//        PgSqlStateClass.X40, "000"),
-//
-//    TRANSACTION_INTEGRITY_CONSTRAINT_VIOLATION(
-//        PgSqlStateClass.X40, "002"),
-//
-//    SERIALIZATION_FAILURE(
-//        PgSqlStateClass.X40, "001"),
-//
-//    STATEMENT_COMPLETION_UNKNOWN(
-//        PgSqlStateClass.X40, "003"),
-//
-//    DEADLOCK_DETECTED(
-//        PgSqlStateClass.X40, "P01"),
-//
-//    SYNTAX_ERROR_OR_ACCESS_RULE_VIOLATION(
-//        PgSqlStateClass.X42, "000"),
-//
-//    SYNTAX_ERROR(
-//        PgSqlStateClass.X42, "601"),
-//
-//    INSUFFICIENT_PRIVILEGE(
-//        PgSqlStateClass.X42, "501"),
-//
-//    CANNOT_COERCE(
-//        PgSqlStateClass.X42, "846"),
-//
-//    GROUPING_ERROR(
-//        PgSqlStateClass.X42, "803"),
-//
-//    WINDOWING_ERROR(
-//        PgSqlStateClass.X42, "P20"),
-//
-//    INVALID_RECURSION(
-//        PgSqlStateClass.X42, "P19"),
-//
-//    INVALID_FOREIGN_KEY(
-//        PgSqlStateClass.X42, "830"),
-//
-//    INVALID_NAME(
-//        PgSqlStateClass.X42, "602"),
-//
-//    NAME_TOO_LONG(
-//        PgSqlStateClass.X42, "622"),
-//
-//    RESERVED_NAME(
-//        PgSqlStateClass.X42, "939"),
-//
-//    DATATYPE_MISMATCH(
-//        PgSqlStateClass.X42, "804"),
-//
-//    INDETERMINATE_DATATYPE(
-//        PgSqlStateClass.X42, "P18"),
-//
-//    COLLATION_MISMATCH(
-//        PgSqlStateClass.X42, "P21"),
-//
-//    INDETERMINATE_COLLATION(
-//        PgSqlStateClass.X42, "P22"),
-//
-//    WRONG_OBJECT_TYPE(
-//        PgSqlStateClass.X42, "809"),
-//
-//    GENERATED_ALWAYS(
-//        PgSqlStateClass.X42, "8C9"),
-//
-//    UNDEFINED_COLUMN(
-//        PgSqlStateClass.X42, "703"),
-//
-//    UNDEFINED_FUNCTION(
-//        PgSqlStateClass.X42, "883"),
-//
-//    UNDEFINED_TABLE(
-//        PgSqlStateClass.X42, "P01"),
-//
-//    UNDEFINED_PARAMETER(
-//        PgSqlStateClass.X42, "P02"),
-//
-//    UNDEFINED_OBJECT(
-//        PgSqlStateClass.X42, "704"),
-//
-//    DUPLICATE_COLUMN(
-//        PgSqlStateClass.X42, "701"),
-//
-//    DUPLICATE_CURSOR(
-//        PgSqlStateClass.X42, "P03"),
-//
-//    DUPLICATE_DATABASE(
-//        PgSqlStateClass.X42, "P04"),
-//
-//    DUPLICATE_FUNCTION(
-//        PgSqlStateClass.X42, "723"),
-//
-//    DUPLICATE_PREPARED_STATEMENT(
-//        PgSqlStateClass.X42, "P05"),
-//
-//    DUPLICATE_SCHEMA(
-//        PgSqlStateClass.X42, "P06"),
-//
-//    DUPLICATE_TABLE(
-//        PgSqlStateClass.X42, "P07"),
-//
-//    DUPLICATE_ALIAS(
-//        PgSqlStateClass.X42, "712"),
-//
-//    DUPLICATE_OBJECT(
-//        PgSqlStateClass.X42, "710"),
-//
-//    AMBIGUOUS_COLUMN(
-//        PgSqlStateClass.X42, "702"),
-//
-//    AMBIGUOUS_FUNCTION(
-//        PgSqlStateClass.X42, "725"),
-//
-//    AMBIGUOUS_PARAMETER(
-//        PgSqlStateClass.X42, "P08"),
-//
-//    AMBIGUOUS_ALIAS(
-//        PgSqlStateClass.X42, "P09"),
-//
-//    INVALID_COLUMN_REFERENCE(
-//        PgSqlStateClass.X42, "P10"),
-//
-//    INVALID_COLUMN_DEFINITION(
-//        PgSqlStateClass.X42, "611"),
-//
-//    INVALID_CURSOR_DEFINITION(
-//        PgSqlStateClass.X42, "P11"),
-//
-//    INVALID_DATABASE_DEFINITION(
-//        PgSqlStateClass.X42, "P12"),
-//
-//    INVALID_FUNCTION_DEFINITION(
-//        PgSqlStateClass.X42, "P13"),
-//
-//    INVALID_PREPARED_STATEMENT_DEFINITION(
-//        PgSqlStateClass.X42, "P14"),
-//
-//    INVALID_SCHEMA_DEFINITION(
-//        PgSqlStateClass.X42, "P15"),
-//
-//    INVALID_TABLE_DEFINITION(
-//        PgSqlStateClass.X42, "P16"),
-//
-//    INVALID_OBJECT_DEFINITION(
-//        PgSqlStateClass.X42, "P17"),
-//
-//    WITH_CHECK_OPTION_VIOLATION(
-//        PgSqlStateClass.X44, "000"),
-//
-//
-//    INSUFFICIENT_RESOURCES(
-//        PgSqlStateClass.X53, "000"),
-//
-//    DISK_FULL(
-//        PgSqlStateClass.X53, "100"),
-//
-//    OUT_OF_MEMORY(
-//        PgSqlStateClass.X53, "200"),
-//
-//    TOO_MANY_CONNECTIONS(
-//        PgSqlStateClass.X53, "300"),
-//
-//    CONFIGURATION_LIMIT_EXCEEDED(
-//        PgSqlStateClass.X53, "400"),
-//
-//
-//    PROGRAM_LIMIT_EXCEEDED(
-//        PgSqlStateClass.X54, "000"),
-//
-//    STATEMENT_TOO_COMPLEX(
-//        PgSqlStateClass.X54, "001"),
-//
-//    TOO_MANY_COLUMNS(
-//        PgSqlStateClass.X54, "011"),
-//
-//    TOO_MANY_ARGUMENTS(
-//        PgSqlStateClass.X54, "023"),
-//
-//
-//    OBJECT_NOT_IN_PREREQUISITE_STATE(
-//        PgSqlStateClass.X55, "000"),
-//
-//    OBJECT_IN_USE(
-//        PgSqlStateClass.X55, "006"),
-//
-//    CANT_CHANGE_RUNTIME_PARAM(
-//        PgSqlStateClass.X55, "P02"),
-//
-//    LOCK_NOT_AVAILABLE(
-//        PgSqlStateClass.X55, "P03"),
-//
-//    UNSAFE_NEW_ENUM_VALUE_USAGE(
-//        PgSqlStateClass.X55, "P04"),
-//
-//
-//    OPERATOR_INTERVENTION(
-//        PgSqlStateClass.X57, "000"),
-//
-//    QUERY_CANCELED(
-//        PgSqlStateClass.X57, "014"),
-//
-//    ADMIN_SHUTDOWN(
-//        PgSqlStateClass.X57, "P01"),
-//
-//    CRASH_SHUTDOWN(
-//        PgSqlStateClass.X57, "P02"),
-//
-//    CANNOT_CONNECT_NOW(
-//        PgSqlStateClass.X57, "P03"),
-//
-//    DATABASE_DROPPED(
-//        PgSqlStateClass.X57, "P04"),
-//
-//    IDLE_SESSION_TIMEOUT(
-//        PgSqlStateClass.X57, "P05"),
+    INVALID_CURSOR_NAME(
+        PgSqlStateClass.X34, "000"),
+
+
+    EXTERNAL_ROUTINE_EXCEPTION(
+        PgSqlStateClass.X38, "000"),
+
+    CONTAINING_SQL_NOT_PERMITTED(
+        PgSqlStateClass.X38, "001"),
+
+    MODIFYING_SQL_DATA_NOT_PERMITTED_EXT(
+        PgSqlStateClass.X38, "002"),
+
+    PROHIBITED_SQL_STATEMENT_ATTEMPTED_EXT(
+        PgSqlStateClass.X38, "003"),
+
+    READING_SQL_DATA_NOT_PERMITTED_EXT(
+        PgSqlStateClass.X38, "004"),
+
+
+    EXTERNAL_ROUTINE_INVOCATION_EXCEPTION(
+        PgSqlStateClass.X39, "000"),
+
+    INVALID_SQLSTATE_RETURNED(
+        PgSqlStateClass.X39, "001"),
+
+    NULL_VALUE_NOT_ALLOWED_EXT(
+        PgSqlStateClass.X39, "004"),
+
+    TRIGGER_PROTOCOL_VIOLATED(
+        PgSqlStateClass.X39, "P01"),
+
+    SRF_PROTOCOL_VIOLATED(
+        PgSqlStateClass.X39, "P02"),
+
+    EVENT_TRIGGER_PROTOCOL_VIOLATED(
+        PgSqlStateClass.X39, "P03"),
+
+
+    SAVEPOINT_EXCEPTION(
+        PgSqlStateClass.X3B, "000"),
+
+    INVALID_SAVEPOINT_SPECIFICATION(
+        PgSqlStateClass.X3B, "001"),
+
+
+    INVALID_CATALOG_NAME(
+        PgSqlStateClass.X3D, "000"),
+
+
+    INVALID_SCHEMA_NAME(
+        PgSqlStateClass.X3F, "000"),
+
+
+    TRANSACTION_ROLLBACK(
+        PgSqlStateClass.X40, "000"),
+
+    TRANSACTION_INTEGRITY_CONSTRAINT_VIOLATION(
+        PgSqlStateClass.X40, "002"),
+
+    SERIALIZATION_FAILURE(
+        PgSqlStateClass.X40, "001"),
+
+    STATEMENT_COMPLETION_UNKNOWN(
+        PgSqlStateClass.X40, "003"),
+
+    DEADLOCK_DETECTED(
+        PgSqlStateClass.X40, "P01"),
+
+
+    SYNTAX_ERROR_OR_ACCESS_RULE_VIOLATION(
+        PgSqlStateClass.X42, "000"),
+
+    SYNTAX_ERROR(
+        PgSqlStateClass.X42, "601"),
+
+    INSUFFICIENT_PRIVILEGE(
+        PgSqlStateClass.X42, "501"),
+
+    CANNOT_COERCE(
+        PgSqlStateClass.X42, "846"),
+
+    GROUPING_ERROR(
+        PgSqlStateClass.X42, "803"),
+
+    WINDOWING_ERROR(
+        PgSqlStateClass.X42, "P20"),
+
+    INVALID_RECURSION(
+        PgSqlStateClass.X42, "P19"),
+
+    INVALID_FOREIGN_KEY(
+        PgSqlStateClass.X42, "830"),
+
+    INVALID_NAME(
+        PgSqlStateClass.X42, "602"),
+
+    NAME_TOO_LONG(
+        PgSqlStateClass.X42, "622"),
+
+    RESERVED_NAME(
+        PgSqlStateClass.X42, "939"),
+
+    DATATYPE_MISMATCH(
+        PgSqlStateClass.X42, "804"),
+
+    INDETERMINATE_DATATYPE(
+        PgSqlStateClass.X42, "P18"),
+
+    COLLATION_MISMATCH(
+        PgSqlStateClass.X42, "P21"),
+
+    INDETERMINATE_COLLATION(
+        PgSqlStateClass.X42, "P22"),
+
+    WRONG_OBJECT_TYPE(
+        PgSqlStateClass.X42, "809"),
+
+    GENERATED_ALWAYS(
+        PgSqlStateClass.X42, "8C9"),
+
+    UNDEFINED_COLUMN(
+        PgSqlStateClass.X42, "703"),
+
+    UNDEFINED_FUNCTION(
+        PgSqlStateClass.X42, "883"),
+
+    UNDEFINED_TABLE(
+        PgSqlStateClass.X42, "P01"),
+
+    UNDEFINED_PARAMETER(
+        PgSqlStateClass.X42, "P02"),
+
+    UNDEFINED_OBJECT(
+        PgSqlStateClass.X42, "704"),
+
+    DUPLICATE_COLUMN(
+        PgSqlStateClass.X42, "701"),
+
+    DUPLICATE_CURSOR(
+        PgSqlStateClass.X42, "P03"),
+
+    DUPLICATE_DATABASE(
+        PgSqlStateClass.X42, "P04"),
+
+    DUPLICATE_FUNCTION(
+        PgSqlStateClass.X42, "723"),
+
+    DUPLICATE_PREPARED_STATEMENT(
+        PgSqlStateClass.X42, "P05"),
+
+    DUPLICATE_SCHEMA(
+        PgSqlStateClass.X42, "P06"),
+
+    DUPLICATE_TABLE(
+        PgSqlStateClass.X42, "P07"),
+
+    DUPLICATE_ALIAS(
+        PgSqlStateClass.X42, "712"),
+
+    DUPLICATE_OBJECT(
+        PgSqlStateClass.X42, "710"),
+
+    AMBIGUOUS_COLUMN(
+        PgSqlStateClass.X42, "702"),
+
+    AMBIGUOUS_FUNCTION(
+        PgSqlStateClass.X42, "725"),
+
+    AMBIGUOUS_PARAMETER(
+        PgSqlStateClass.X42, "P08"),
+
+    AMBIGUOUS_ALIAS(
+        PgSqlStateClass.X42, "P09"),
+
+    INVALID_COLUMN_REFERENCE(
+        PgSqlStateClass.X42, "P10"),
+
+    INVALID_COLUMN_DEFINITION(
+        PgSqlStateClass.X42, "611"),
+
+    INVALID_CURSOR_DEFINITION(
+        PgSqlStateClass.X42, "P11"),
+
+    INVALID_DATABASE_DEFINITION(
+        PgSqlStateClass.X42, "P12"),
+
+    INVALID_FUNCTION_DEFINITION(
+        PgSqlStateClass.X42, "P13"),
+
+    INVALID_PREPARED_STATEMENT_DEFINITION(
+        PgSqlStateClass.X42, "P14"),
+
+    INVALID_SCHEMA_DEFINITION(
+        PgSqlStateClass.X42, "P15"),
+
+    INVALID_TABLE_DEFINITION(
+        PgSqlStateClass.X42, "P16"),
+
+    INVALID_OBJECT_DEFINITION(
+        PgSqlStateClass.X42, "P17"),
+
+
+    WITH_CHECK_OPTION_VIOLATION(
+        PgSqlStateClass.X44, "000"),
+
+
+    INSUFFICIENT_RESOURCES(
+        PgSqlStateClass.X53, "000"),
+
+    DISK_FULL(
+        PgSqlStateClass.X53, "100"),
+
+    OUT_OF_MEMORY(
+        PgSqlStateClass.X53, "200"),
+
+    TOO_MANY_CONNECTIONS(
+        PgSqlStateClass.X53, "300"),
+
+    CONFIGURATION_LIMIT_EXCEEDED(
+        PgSqlStateClass.X53, "400"),
+
+
+    PROGRAM_LIMIT_EXCEEDED(
+        PgSqlStateClass.X54, "000"),
+
+    STATEMENT_TOO_COMPLEX(
+        PgSqlStateClass.X54, "001"),
+
+    TOO_MANY_COLUMNS(
+        PgSqlStateClass.X54, "011"),
+
+    TOO_MANY_ARGUMENTS(
+        PgSqlStateClass.X54, "023"),
+
+
+    OBJECT_NOT_IN_PREREQUISITE_STATE(
+        PgSqlStateClass.X55, "000"),
+
+    OBJECT_IN_USE(
+        PgSqlStateClass.X55, "006"),
+
+    CANT_CHANGE_RUNTIME_PARAM(
+        PgSqlStateClass.X55, "P02"),
+
+    LOCK_NOT_AVAILABLE(
+        PgSqlStateClass.X55, "P03"),
+
+    UNSAFE_NEW_ENUM_VALUE_USAGE(
+        PgSqlStateClass.X55, "P04"),
+
+
+    OPERATOR_INTERVENTION(
+        PgSqlStateClass.X57, "000"),
+
+    QUERY_CANCELED(
+        PgSqlStateClass.X57, "014"),
+
+    ADMIN_SHUTDOWN(
+        PgSqlStateClass.X57, "P01"),
+
+    CRASH_SHUTDOWN(
+        PgSqlStateClass.X57, "P02"),
+
+    CANNOT_CONNECT_NOW(
+        PgSqlStateClass.X57, "P03"),
+
+    DATABASE_DROPPED(
+        PgSqlStateClass.X57, "P04"),
+
+    IDLE_SESSION_TIMEOUT(
+        PgSqlStateClass.X57, "P05"),
 
 
     SYSTEM_ERROR(

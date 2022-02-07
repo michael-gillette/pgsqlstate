@@ -131,6 +131,58 @@ public abstract class PgSqlStateClass {
         SqlStateCategory.EXCEPTION.newRootClass(
             "2F", "SQL Routine Exception");
 
+    public static final SqlStateRootClass X34 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "34", "Invalid Cursor Name");
+
+    public static final SqlStateRootClass X38 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "38", "External Routine Exception");
+
+    public static final SqlStateRootClass X39 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "39", "External Routine Invocation Exception");
+
+    public static final SqlStateRootClass X3B =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "3B", "Savepoint Exception");
+
+    public static final SqlStateRootClass X3D =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "3D", "Invalid Catalog Name");
+
+    public static final SqlStateRootClass X3F =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "3F", "Invalid Schema Name");
+
+    public static final SqlStateRootClass X40 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "40", "Transaction Rollback");
+
+    public static final SqlStateRootClass X42 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "42", "Syntax Error or Access Rule Violation");
+
+    public static final SqlStateRootClass X44 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "44", "WITH CHECK OPTION Violation");
+
+    public static final SqlStateRootClass X53 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "53", "Insufficient Resources");
+
+    public static final SqlStateRootClass X54 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "54", "Program Limit Exceeded");
+
+    public static final SqlStateRootClass X55 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "55", "Object Not In Prerequisite State");
+
+    public static final SqlStateRootClass X57 =
+        SqlStateCategory.EXCEPTION.newRootClass(
+            "57", "Operator Intervention");
+
     public static final SqlStateRootClass X58 =
         SqlStateCategory.EXCEPTION.newRootClass(
             "58", "System Error");
